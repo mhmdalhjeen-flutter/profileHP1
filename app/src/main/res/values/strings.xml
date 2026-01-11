@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">profileHP</string>
+    <string name="back"><![CDATA[<]]></string>
+    <string name="iconP">✎</string>
+    <string name="starIcon">★★★★★</string>
+    <string name="name">Johan Smith</string>
+    <string name="city">California, USA</string>
+    <string name="balance">Balance</string>
+    <string name="balanceValue">00.00</string>
+    <string name="orders">Orders</string>
+    <string name="ordersValue">10</string>
+    <string name="profile">Profile</string>
+    <string name="stare">★★★★★</string>
+    <string name="profil">Profile</string>
+    <string name="logout">Logout</string>
+    <string name="nearest_shop">Nearest Shop</string>
+</resources>

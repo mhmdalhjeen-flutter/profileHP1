@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <View
+        android:id="@+id/divider_bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#E0E0E0"
+        app:layout_constraintBottom_toTopOf="@id/bottom_nav_c" />
+
+
+    <LinearLayout
+        android:id="@+id/bottom_nav_c"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/light_gray"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingHorizontal="20dp"
+        android:weightSum="4.2"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="24dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_home"
+            app:tint="@color/text_gray" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="24dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_notifications"
+            app:tint="@color/text_gray" />
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="24dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_cart"
+            app:tint="@color/text_gray" />
+
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1.2"
+            android:backgroundTint="@color/main_green"
+            android:text="Profile"
+            android:drawableStart="@drawable/ic_person"
+            android:drawablePadding="8dp"
+            android:drawableTint="@color/white"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toTopOf="@id/divider_bottom_nav"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="50dp">
+
+
+
+            <TextView
+                android:id="@+id/btn_back_c"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="←"
+                android:gravity="center"
+                android:clickable="true"
+                android:focusable="true"
+                android:textColor="@color/black"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/btn_edit_c"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="✎"
+                android:gravity="center"
+                android:textColor="@color/main_green"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cv_profile_image_c"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="10dp"
+                app:cardCornerRadius="50dp"
+                app:cardElevation="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btn_back_c">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/light_gray"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/man" />
+            </androidx.cardview.widget.CardView>
+
+
+            <TextView
+                android:id="@+id/ll_rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="★★★★★"
+                android:textColor="#FFD700"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/cv_profile_image_c"/>
+
+            <TextView
+                android:id="@+id/tv_name_c"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Johan Smith"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ll_rating" />
+
+            <TextView
+                android:id="@+id/tv_location_c"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="California, USA"
+                android:textColor="@color/text_gray"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_name_c" />
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/box_balance"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="5dp"
+                app:cardBackgroundColor="@color/main_green"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="0dp"
+                app:layout_constraintEnd_toStartOf="@id/box_orders"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_location_c">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Balance"
+                        android:textColor="#CCFFFFFF"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="00.00"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/box_orders"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_marginHorizontal="5dp"
+                app:cardBackgroundColor="@color/main_green"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="0dp"
+                app:layout_constraintEnd_toStartOf="@id/box_spent"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toEndOf="@id/box_balance"
+                app:layout_constraintTop_toTopOf="@id/box_balance">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Orders"
+                        android:textColor="#CCFFFFFF"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="10"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/box_spent"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_marginStart="5dp"
+                app:cardBackgroundColor="@color/main_green"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_weight="1"
+                app:layout_constraintStart_toEndOf="@id/box_orders"
+                app:layout_constraintTop_toTopOf="@id/box_balance">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Total Spent"
+                        android:textColor="#CCFFFFFF"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="000.0"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <!-- القائمة -->
+            <!-- لاني لم اجد الايقونات المناسبة vector <- new عن طريق  drawable محمد: تم انشاؤ الايقونات في  -->
+            <TextView
+                android:id="@+id/menu_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:drawableStart="@drawable/ic_person"
+                android:drawableTint="@color/main_green"
+                android:drawableEnd="@drawable/ic_arrow_right"
+                android:drawablePadding="15dp"
+                android:gravity="center_vertical"
+                android:padding="4dp"
+                android:text="Personal Information"
+                android:textColor="@color/text_gray"
+                android:textSize="14sp"
+                app:layout_constraintTop_toBottomOf="@id/box_balance" />
+
+            <View
+                android:id="@+id/divider1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E0E0E0"
+                app:layout_constraintTop_toBottomOf="@id/menu_info" />
+
+            <TextView
+                android:id="@+id/menu_order"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_cart"
+                android:drawableTint="@color/main_green"
+                android:drawableEnd="@drawable/ic_arrow_right"
+                android:drawablePadding="15dp"
+                android:gravity="center_vertical"
+                android:padding="4dp"
+                android:text="Your Order"
+                android:textColor="@color/text_gray"
+                android:textSize="14sp"
+                app:layout_constraintTop_toBottomOf="@id/divider1" />
+
+            <View
+                android:id="@+id/divider2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E0E0E0"
+                app:layout_constraintTop_toBottomOf="@id/menu_order" />
+
+            <TextView
+                android:id="@+id/menu_fav"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_heart"
+                android:drawableTint="@color/main_green"
+                android:drawableEnd="@drawable/ic_arrow_right"
+                android:drawablePadding="15dp"
+                android:gravity="center_vertical"
+                android:padding="4dp"
+                android:text="Your Favourites"
+                android:textColor="@color/text_gray"
+                android:textSize="14sp"
+                app:layout_constraintTop_toBottomOf="@id/divider2" />
+
+            <View
+                android:id="@+id/divider3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E0E0E0"
+                app:layout_constraintTop_toBottomOf="@id/menu_fav" />
+
+            <TextView
+                android:id="@+id/menu_pay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_payment"
+                android:drawableTint="@color/main_green"
+                android:drawableEnd="@drawable/ic_arrow_right"
+                android:drawablePadding="15dp"
+                android:gravity="center_vertical"
+                android:padding="4dp"
+                android:text="Payment"
+                android:textColor="@color/text_gray"
+                android:textSize="14sp"
+                app:layout_constraintTop_toBottomOf="@id/divider3" />
+
+            <View
+                android:id="@+id/divider4"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E0E0E0"
+                app:layout_constraintTop_toBottomOf="@id/menu_pay" />
+
+            <TextView
+                android:id="@+id/menu_shops"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_thumb_up"
+                android:drawableTint="@color/main_green"
+                android:drawableEnd="@drawable/ic_arrow_right"
+                android:drawablePadding="15dp"
+                android:gravity="center_vertical"
+                android:padding="4dp"
+                android:text="Recommended Shops"
+                android:textColor="@color/text_gray"
+                android:textSize="14sp"
+                app:layout_constraintTop_toBottomOf="@id/divider4" />
+
+            <View
+                android:id="@+id/divider5"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E0E0E0"
+                app:layout_constraintTop_toBottomOf="@id/menu_shops" />
+
+            <TextView
+                android:id="@+id/menu_nearest"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_location"
+                android:drawableTint="@color/main_green"
+                android:drawableEnd="@drawable/ic_arrow_right"
+                android:drawablePadding="15dp"
+                android:gravity="center_vertical"
+                android:padding="4dp"
+                android:text="Nearest Shop"
+                android:textColor="@color/text_gray"
+                android:textSize="14sp"
+                app:layout_constraintTop_toBottomOf="@id/divider5" />
+
+            <View
+                android:id="@+id/divider6"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E0E0E0"
+                app:layout_constraintTop_toBottomOf="@id/menu_nearest" />
+
+            <TextView
+                android:id="@+id/menu_logout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/ic_logout"
+                android:drawableTint="@color/text_gray"
+                android:drawablePadding="15dp"
+                android:gravity="center_vertical"
+                android:padding="4dp"
+                android:text="Logout"
+                android:textColor="@color/text_gray"
+                android:textSize="14sp"
+                app:layout_constraintTop_toBottomOf="@id/divider6" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
